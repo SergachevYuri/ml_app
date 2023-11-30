@@ -1,4 +1,4 @@
-[![Tests](https://github.com/SergachevYuri/ml_app/blob/main/.github/workflows/python-app.yml/badge.svg)](https://github.com/SergachevYuri/ml_app/blob/main/.github/workflows/python-app.yml)
+[![Tests](https://github.com/SergachevYuri/ml_app/actions/workflows/python-app.yml/badge.svg)](https://github.com/SergachevYuri/ml_app/blob/main/.github/workflows/python-app.yml)
 
 
 # ML APP
