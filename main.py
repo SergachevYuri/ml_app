@@ -60,10 +60,10 @@ def predict(Item: Item):
     for score, label, box, colors in zip(results["scores"], results["labels"], results["boxes"], box_color):
         box = [round(i, 2) for i in box.tolist()]
         # Пишем лог что нашли
-        print(
-                f"Нашли {model.config.id2label[label.item()]} с уверенностью "
-               f"{round(score.item(), 3)} в квадрате {box}"
-        )
+        #print(
+        #        f"Нашли {model.config.id2label[label.item()]} с уверенностью "
+        #       f"{round(score.item(), 3)} в квадрате {box}"
+        #)
         # вычисляем квадрат с найденым объектом
         x, y, x_max, y_max = box
         # рисуем квадрат на найденом объекте
@@ -80,4 +80,4 @@ def predict(Item: Item):
     image.save("output.jpg")
     # Показываем изображение
 
-    return FileResponse("output.jpg")
+    return {'image': 'output.jpg'}
