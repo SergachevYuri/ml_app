@@ -54,7 +54,7 @@ def predict(Item: Item):
     # Рисуем на изображении 
     draw = ImageDraw.Draw(image)
     # Выбираем шрифт
-    font = ImageFont.truetype("arial.ttf", size=font_size)
+    font = ImageFont.truetype("./Arial.ttf", size=font_size)
     
     # перебираем все вхождения
     for score, label, box, colors in zip(results["scores"], results["labels"], results["boxes"], box_color):
@@ -77,7 +77,7 @@ def predict(Item: Item):
         draw.text((x, y), model.config.id2label[label.item()], fill=text_color, font=font)
 
     # сохроняем изображение с найдеными объектами
-    image.save("output.jpg")
+    image.save("./output.jpg")
     # Показываем изображение
 
     return {'image': 'output.jpg'}
