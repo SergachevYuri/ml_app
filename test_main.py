@@ -12,7 +12,7 @@ def test_read_main():
 
 def test_process():
     response = client.post("/process/",
-        json={"url": "https://cs11.pikabu.ru/post_img/big/2020/02/26/1/1582669543176696915.jpg"}
+        json={"url": "image.jpg"}
     )
     json_data = response.json() 
     print(json_data)

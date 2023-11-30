@@ -39,7 +39,7 @@ def predict(Item: Item):
 
     # Загружаем изображение
     url = Item.url
-    image = Image.open(requests.get(url, stream=True).raw)
+    image = Image.open(url)
 
     # Подключаем модель Обноружения предметов (Object Detection)
     processor = DetrImageProcessor.from_pretrained("facebook/detr-resnet-50", revision="no_timm")
